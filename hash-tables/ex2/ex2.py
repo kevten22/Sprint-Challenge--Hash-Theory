@@ -9,18 +9,15 @@ def reconstruct_trip(tickets):
     link = table[None]
     result.append(link)
     complete = False
-    print(link)
+
     while(complete == False):
-      try:
         link = table[link]
         if(link):
           result.append(link)
         if(link == None):
           complete = True
-      except:
-        return []
       
-      return result
+    return result
   except:
       return []
 
